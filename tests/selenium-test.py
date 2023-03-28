@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
+from webdriver_manager.chrome import ChromeDriverManager
 import sys
 
 # driver = webdriver.Chrome()
@@ -25,7 +26,9 @@ import sys
 #从服务中获取html信息上传到action
 def get_html(uri, path):
 
-    driver = webdriver.Chrome()
+    service = ChromeService(executable_path=ChromeDriverManager().install())
+
+    driver = webdriver.Chrome(service=service)
 
     driver.get(url=uri)
 
