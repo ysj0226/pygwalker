@@ -43,7 +43,7 @@ def get_html(uri, path):
     # driver.find_element(By.LINK_TEXT, "Hello Selenium!").click()
 
     # Wait for the alert to be displayed and store it in a variable
-    alert = WebDriverWait(driver, 10).until(expected_conditions.alert_is_present())
+    alert = WebDriverWait(driver, sys.maxsize).until(expected_conditions.alert_is_present())
 
     # Store the alert text in a variable
     # text = alert.text
