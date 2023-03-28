@@ -2,9 +2,12 @@
 ```bash
 streamlit run test_streamlit.py
 ``` """
+import sys
+sys.path.append('pygwalker')
 import os
 import pandas as pd
 import pygwalker as pyg
+
 
 HERE = os.path.dirname(__file__)
 
