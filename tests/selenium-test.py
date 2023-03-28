@@ -35,7 +35,7 @@ def get_html(uri, path):
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--disable-dev-shm-usage')
 
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver = webdriver.Chrome(service=service, chrome_options=chrome_options)
 
     driver.get(url=uri)
 
