@@ -63,7 +63,7 @@ jobs:
       - name: run the streamlit
         working-directory: ./
         run: |
-          nohup streamlit run ./test/test_streamlit.py &
+          nohup streamlit run ./tests/test_streamlit.py &
       - name: Test and get the html
         working-directory: ./
         run: |
