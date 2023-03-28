@@ -42,6 +42,7 @@ jobs:
           path: ./pygwalker/templates/dist/*
   
   build-py:
+    needs: build-js
     
     runs-on: ubuntu-latest
     strategy:
