@@ -29,15 +29,15 @@ def get_html(uri, path):
 
     service = ChromeService(executable_path=ChromeDriverManager().install())
 
-    # chrome_options = webdriver.ChromeOptions()
+    chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument('--headless')
-    # chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--no-sandbox')
     # chrome_options.add_argument('--disable-gpu')
     # chrome_options.add_argument('--disable-dev-shm-usage')
 
     driver = webdriver.Chrome(
         service=service, 
-        # chrome_options=chrome_options
+        chrome_options=chrome_options
         )
 
     driver.get(url=uri)
